@@ -1,4 +1,47 @@
+html {
+    --indent: 27px;
+}
+
 body {
     background-color: rgb(230, 227, 197);
 }
 
+header, main, footer {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2, h3 {
+    padding: 5px 0px 5px var(--indent);
+}
+
+h1, h2, h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a {
+    font-size: 12px;
+}
+
+ul, ol {
+    color: rgb(0, 116, 104);
+}
+
+.kevin-performing {
+    margin: 5px 5% 15px 5%;
+    border: 5px inset rgb(103, 163, 103);
+    width: 90%;
+}
+
+.lonerism {
+    margin-left: var(--indent);
+}
+
+.lonerism-cover {
+    height: 200px;
+    border-radius: 50%;
+}
