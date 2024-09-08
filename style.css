@@ -1,5 +1,10 @@
 html {
     --indent: 27px;
+    --list-text-colour: rgb(0, 116, 104);
+    --innerspeaker-background: rgb(176, 213, 194);
+    --lonerism-background: rgb(249, 222, 179);
+    --currents-background: rgb(208, 183, 218);
+    --the-slow-rush-background: rgb(235, 177, 173);
 }
 
 body {
@@ -28,7 +33,11 @@ a {
 }
 
 ul, ol {
-    color: rgb(0, 116, 104);
+    color: var(--list-text-colour);
+}
+
+iframe {
+    display: none;
 }
 
 .kevin-performing {
@@ -37,9 +46,12 @@ ul, ol {
     width: 90%;
 }
 
-.lonerism {
-    margin-left: var(--indent);
+.album-list > li {
+    margin-left: calc(0px - var(--indent));
+    line-height: 20px;
 }
+
+
 
 .lonerism-cover {
     height: 200px;
@@ -47,13 +59,14 @@ ul, ol {
 }
 
 .toggle {
-    margin: 0 0 20px var(--indent);
+    margin: 0 0 20px 0;
     height: 40px;
     width: 200px;
     border-radius: 5px;
     font-size: medium;
     align-items: center;
     justify-content: center;
+    background-color: rgb(230, 230, 243);
 }
 
 .toggle:hover {
@@ -68,7 +81,6 @@ ul, ol {
 
 .toggle, .album {
     display: flex;
-    background-color: rgb(230, 230, 243);
     border: 2px solid rgb(3, 3, 165);
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -79,16 +91,48 @@ ul, ol {
     align-items: start;
 }
 
+#innerspeaker {
+    background-color: var(--innerspeaker-background);
+}
+
+#lonerism {
+    background-color: var(--lonerism-background);
+}
+
+#currents {
+    background-color: var(--currents-background);
+}
+
+#the-slow-rush {
+    background-color: var(--the-slow-rush-background);
+}
+
 .album > ul {
-    padding: 0 0 0 10%;
+    padding: 0 5% 0 5%;
     width: 90%;
 }
+
 
 .track {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
-    padding: 0 10% 0 0;
+    margin-bottom: 2px;
+    padding: 1% 5% 5% 5%;
+}
+
+.album-info {
+    font-size: 19px;
+}
+
+.album-info:hover {
+    color: var(--list-text-colour) !important;
+    background-color: inherit !important;
+}
+
+.track:hover {
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(78, 78, 158);
 }
 
 .track > p {
